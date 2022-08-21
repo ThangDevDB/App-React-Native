@@ -17,18 +17,33 @@ export default function TabNavigator() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "cyan",
+        tabBarHideOnKeyboard: true,
+        tabBarActiveTintColor: "#00CC33",
         tabBarInactiveTintColor: "black",
-        tabBarActiveBackgroundColor: "pink",
-        tabBarInactiveBackgroundColor: "pink"
+        tabBarActiveBackgroundColor: "#EEEEEE",
+        tabBarInactiveBackgroundColor: "#EEEEEE",
+
+        tabBarStyle: {
+          height: 60,
+          borderRadius: 16,
+          justifyContent: "center",
+          alignItems: "center",
+          fontSize: 12,
+          // bottom: 5,
+          // marginHorizontal: 10,
+          shadowColor: "#000",
+          shadowOpacity: 1,
+        }
       }}
+
+    // tabBar={(props) => <CustomTabBar {...props} />
     >
 
       <Tab.Screen
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: ({ color }) => <Ionicons name="home" size={24} color={color} />
+          tabBarIcon: ({ color }) => <Ionicons name="home" size={27} color={color} />
         }}
       />
 
@@ -36,7 +51,7 @@ export default function TabNavigator() {
         name="Shopping"
         component={Shopping}
         options={{
-          tabBarIcon: ({ color }) => <FontAwesome5 name="shopping-cart" size={24} color={color} />
+          tabBarIcon: ({ color }) => <FontAwesome5 name="shopping-cart" size={27} color={color} />
         }}
       />
 
@@ -52,7 +67,7 @@ export default function TabNavigator() {
         name="Me"
         component={Me}
         options={{
-          tabBarIcon: ({ color }) => <Ionicons name="people" size={24} color={color} />
+          tabBarIcon: ({ color }) => <Ionicons name="people" size={27} color={color} />
         }}
       />
 
@@ -60,7 +75,7 @@ export default function TabNavigator() {
         name="Settings"
         component={Settings}
         options={{
-          tabBarIcon: ({ color }) => <Ionicons name="settings" size={24} color={color} />
+          tabBarIcon: ({ color }) => <Ionicons name="settings" size={27} color={color} />
         }}
       />
     </Tab.Navigator>

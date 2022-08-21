@@ -34,7 +34,7 @@ export default Home
 const styles = StyleSheet.create({
   searchBox:{
     flexDirection: 'row',
-    marginTop: 40,
+    marginTop: 30,
     backgroundColor: 'white',
     padding: 10,
     marginHorizontal: 15,
