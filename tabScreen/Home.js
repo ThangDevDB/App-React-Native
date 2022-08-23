@@ -18,7 +18,7 @@ const Home = () => {
       </View>
       </View>   
 
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Restaurent title="Thịnh Hành" data={filterData('$')}/> 
         <Restaurent title="Nhà Hàng Gần Bạn" data={filterData('$$')}/>
         <Restaurent title="Đề Xuất Cho Bạn" data={filterData('$$$')}/>
